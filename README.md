@@ -3,6 +3,9 @@
 ## Objetivo 🎯
 El objetivo de esta práctica es la programación de un kit de arduino proporcionado por la universidad. Este kit consta de un coche conectado a una placa de Arduino uno y enlazado a otra placa ESP32 con conexión wifi. El objetivo es el seguimiento de una linea mediante los sensores de infrarojos del coche. Además de esto también se pide mandar mensajes a un servidor mqtt con información de lo que va ocurriendo en el coche 
 
+![image](https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/4a3fd3b4-965b-4c7a-ac50-899e252d3155)
+
+
 ## Implementación
 
 Para la primera implementación lo que intentamos hacer fue una pequeña máquina de estados donde el robot transitaba en función de las lecturas del sensor de infrarrojos. 
