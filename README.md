@@ -20,6 +20,10 @@ Una vez teniamos una buena base de la práctica comenzamos a añadir implementac
 
 - También intentamos añadir un controlador PID para mejorar la corrección de errores y manejos de la velocidad del coche. Una vez lo tuvimos implementado, nos pusimos a ajustar los valores y nos dimos cuenta de que este o era muy inseguro e inestable y perida rápidamente la linea o era mas seguro pero también mas lento que la version anterior.
 
+- Para calcular la distancia a la que se tenía que parar el coche, usamos el ultrasonido que tiene el coche ubicado en al parte frontal. Este lanza una onda y en funcion de cuanto tarde en regresar calcula la distancia. Esto lo tenemos que realizar lo más rápido posible ya que el coche cambia constantemente de posición y una lectura tardia podria significar una colision. Aunque la distancia a la que se deveria detener el coche es a 8 cm este realmente lo hace a una distancia mas cercana de entre uno o dos centímetros de erro ya que este ya tenia una velocidad y una inercia.
+
+- Para la comunicación entre el Arduino y la placa ESP hemos usado el puero serie que ambos proporcionan. En este kit en concreto es un poco engorroso ya que hay que estar constantemente cambiando un switch que tiene la placa para subir el código a la palca o comunicarse entre ellas.
+
 ## 
 
 ## Dependencias
