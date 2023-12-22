@@ -9,11 +9,8 @@ El objetivo de esta práctica es la programación de un kit de arduino proporcio
 ## Implementación
 
 Para la primera implementación lo que intentamos hacer fue una pequeña máquina de estados donde el robot transitaba en función de las lecturas del sensor de infrarrojos. 
-
 Una vez tuvimos eso hecho nos pusimos manos a la obra con todo lo que se refería a la comunicación. Comenzamos enviado mensajes simples y ma tarde comenzamosa a ir añadiendo los JSONs
-
 Tambien desarollamos una función que nos permitia depurar el codigo atraves de los codigos de colores que transmitia un led 
-
 Una vez teniamos una buena base de la práctica comenzamos a añadir implementaciones pero no de forma muy exitosa.
 
 - Intentamos crear una version que estuviera dotada de freeRTOS para que el sistama fuera mas reactivo y pudieranos nosotros asignar los prioridades que quisiéramos a las diferentes tareas. Esto no salio del todo bien ya que en vez de sernos util nos perjudicó y hacia que el bucle principal no fuinonara de la manera adecuada
@@ -32,16 +29,17 @@ Para que el codigo funcione correctamente es necesario instalar estas dos librer
 ### MQTT
 Esta libreria nos permite mantener una comunicacion con el servidor e intercambiar mensajes.
 Para lenzar el servidor usamos *mosquitto_sub* con el id de el grupo correspondiente que en nustro caso es el 9
-```
-mosquitto_sub -v -h 193.147.53.2 -p 21883 -t /SETR/2023/$ID_EQUIPO/
 
 ```
+mosquitto_sub -v -h 193.147.53.2 -p 21883 -t /SETR/2023/$ID_EQUIPO/
+```
+
 ![image](https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/96f8d6bf-3dd7-4b0e-83cc-2ec1fa121023)
 
 ### FastLED
 Con esta libreria podemos controlar los colores del led RGD situado en la placa de Arduino.
-![image](https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/4acad45c-5f5c-4893-836b-93a053eab074)
 
+![image](https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/4acad45c-5f5c-4893-836b-93a053eab074)
 
 
 ## Conclusión 
