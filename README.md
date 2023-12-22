@@ -21,7 +21,14 @@ Una vez teniamos una buena base de la práctica comenzamos a añadir implementac
 
 - Para la comunicación entre el Arduino y la placa ESP hemos usado el puero serie que ambos proporcionan. En este kit en concreto es un poco engorroso ya que hay que estar constantemente cambiando un switch que tiene la placa para subir el código a la palca o comunicarse entre ellas.
 
-## 
+## Funcionamiento
+El programa comienza con la placa ESP intentandose conectar a internet y seguido de esto, al servido MQTT. Al conseguir ambas conexiones, enviará un mensaje a la placa Arduino. La placa Arduino esperará a recibir este mensaje para poder comenzar. Al obtenerlo, enviará de vuelta un mensaje de START_LAP al ESP, el cuál enviará este Json al servidor. Además de enviarlo, el Arduino guardará el tiempo de inicio para usarlo tanto en los PINGS como en el END_LAP.
+
+Para el control del robot y que no se salga de la línea, hemos implementado una máquina de estados que dependía del lado del sensor que detectase la línea. Si era el sensor de la izquierda, las ruedas de la izquierda reducían una cuarta parte su velocidad para que así recuperase la posición. Esto ocurría de manera inversa con el sensor derecho. A su vez, se guardaba la última lectura del sensor, si era izquierda o derecha, para que si se perdía la línea, durante el recovery la encontrase.
+
+Durante todo esto, se ejecutaba también el sensor de ultrasonidos para detectar si había un obstáculo a menos de 8 cm y así acabar la prueba.
+También, cada 4 s se mandabá un PING a la placa ESP para que esta lo enviase al servidor.
+
 
 ## Dependencias 🗃️
 
