@@ -22,3 +22,6 @@ Una vez teniamos una buena base de la práctica comenzamos a añadir implementac
 Tras muchas pruebas y errores. Nos centramos en hacer una versión quiza mas lenta pero mas segura, sin sistema freeRTOS ni sistema PID. Simplemente una velocidad constante pero muy bien calibrada para que el coche cumpliera el objetivo, **seguir la linea** ...
 
 ## Video demostrativo 
+
+https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/6cdc0828-822a-4bf0-b96e-db5e6bc6e3ae
+
