@@ -20,6 +20,26 @@ Una vez teniamos una buena base de la práctica comenzamos a añadir implementac
 
 - También intentamos añadir un controlador PID para mejorar la corrección de errores y manejos de la velocidad del coche. Una vez lo tuvimos implementado, nos pusimos a ajustar los valores y nos dimos cuenta de que este o era muy inseguro e inestable y perida rápidamente la linea o era mas seguro pero también mas lento que la version anterior.
 
+## 
+
+## Dependencias
+
+Para que el codigo funcione correctamente es necesario instalar estas dos librerias: 
+### MQTT
+Esta libreria nos permite mantener una comunicacion con el servidor e intercambiar mensajes.
+Para lenzar el servidor usamos *mosquitto_sub* con el id de el grupo correspondiente que en nustro caso es el 9
+```
+mosquitto_sub -v -h 193.147.53.2 -p 21883 -t /SETR/2023/$ID_EQUIPO/
+
+```
+![image](https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/96f8d6bf-3dd7-4b0e-83cc-2ec1fa121023)
+
+### FastLED
+Con esta libreria podemos controlar los colores del led RGD situado en la placa de Arduino.
+![image](https://github.com/cescarcena2021/SmartRobot-FollowLine/assets/102520602/4acad45c-5f5c-4893-836b-93a053eab074)
+
+
+
 ## Conclusión 
 
 Tras muchas pruebas y errores. Nos centramos en hacer una versión quiza mas lenta pero mas segura, sin sistema freeRTOS ni sistema PID. Simplemente una velocidad constante pero muy bien calibrada para que el coche cumpliera el objetivo, **seguir la linea** ...
